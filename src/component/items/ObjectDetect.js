@@ -51,9 +51,10 @@ const ObjectDetect = () => {
     if (ws.current) {
       ws.current.close();
     }
+ 
 
-    ws.current = new WebSocket(`${WEBSOCKET_URL}:8000/ws/detect/`);
-
+  
+ws.current = new WebSocket(`ws://192.168.104.96:8000/ws/detect/`);
     ws.current.onopen = () => {
       console.log('WebSocket connected');
       setIsConnected(true);

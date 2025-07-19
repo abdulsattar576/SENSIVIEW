@@ -100,7 +100,7 @@ const TextOCRScreen = () => {
     });
 
     try {
-      const response = await fetch(`${BASE_URL}:8000/api/detect-text/`, {
+      const response = await fetch(`http://192.168.104.96:8000/api/detect-text/`, {
         method: 'POST',
         body: formData,
       });

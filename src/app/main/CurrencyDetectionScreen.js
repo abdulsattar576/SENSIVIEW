@@ -46,7 +46,7 @@ const CurrencyDetectionScreen = () => {
       ws.current.close();
     }
 
-    ws.current = new WebSocket(`${WEBSOCKET_URL}:8000/ws/currency/`);
+  ws.current = new WebSocket(`ws://192.168.104.96:8000/ws/currency/`);
 
     ws.current.onopen = () => {
       console.log('WebSocket connected');

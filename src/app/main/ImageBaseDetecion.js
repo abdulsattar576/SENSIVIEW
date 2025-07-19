@@ -16,8 +16,8 @@ import Tts from 'react-native-tts';
 import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { saveActivity } from '../../services/ActivityService';
-import {BASE_URL} from"@env"
-const BACKEND_URL = `${BASE_URL}:8000/api/detect/`;
+ 
+const BACKEND_URL = `http://192.168.104.96:8000/api/detect/`;
 
 const ImageBaseDetection = () => {
   const [originalImage, setOriginalImage] = useState(null);

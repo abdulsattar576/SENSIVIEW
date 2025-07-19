@@ -23,7 +23,7 @@ const Stack = createNativeStackNavigator ();
         <Stack.Screen name='Info' component={Info}/>
         <Stack.Screen name='ImageDetection' component={ImageBaseDetecion}/>
         <Stack.Screen name='TextDetection' component={TextOCRScreen}/>
-        <Stack.Screen name='LiveDetect' component={LiveDetectionScreen}/>
+        
         <Stack.Screen name='CurrencyDetect' component={CurrencyDetectionScreen}/>
         <Stack.Screen name='seatDetect' component={SeatDetectionScreen}/>
         <Stack.Screen name='find' component={FindObjectScreen}/>

@@ -10,28 +10,32 @@ import {
   StatusBar,
 } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+ 
 import {moderateScale, scale, verticalScale} from 'react-native-size-matters';
-import Selfie from '../../../component/items/Selfie';
+ 
 import ObjectDetect from '../../../component/items/ObjectDetect';
+import { useDispatch } from 'react-redux';
+import { addinfo } from '../../../redux/Slice';
+ 
 
 const {width, height} = Dimensions.get('window');
 
 const index = ({navigation}) => {
   const [drawerVisible, setDrawerVisible] = useState(false);
-
+const dispatch=useDispatch()
   const menuItems = [
     {icon: 'text-outline', name: 'Text', action: 'TextDetection'},
-    {icon: 'cash-outline', name: 'Currency', action: 'CurrencyDetect'},
+ 
     {icon: 'image-outline', name: 'Images', action: 'ImageDetection'},
-    {icon: 'compass-outline', name: 'Explore', action: 'LiveDetect'},
     {icon: 'search-outline', name: 'Find', action: 'find'},
     {icon: 'seat-outline', name: 'Seat', action: 'seatDetect'},
   ];
 
-  const handleNavigation = (screen) => {
+  const handleNavigation = (screen,name) => {
     toggleDrawer();
+    dispatch(addinfo(name))
     navigation.navigate(screen);
+
   };
 
   const toggleDrawer = () => setDrawerVisible(!drawerVisible);
@@ -111,7 +115,7 @@ const index = ({navigation}) => {
                   <TouchableOpacity
                     key={index}
                     style={styles.menuItem}
-                    onPress={() => handleNavigation(item.action)}
+                    onPress={() => handleNavigation(item.action,item.name)}
                     activeOpacity={0.7}
                   >
                     <View style={styles.menuIconContainer}>

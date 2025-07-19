@@ -1,7 +1,7 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
 import {BASE_URL} from"@env"
 // Use local network IP for physical devices
-const baseUrl = `${BASE_URL}:8000/api/user/`;
+const baseUrl = `http://192.168.104.96:8000/api/user/`;
 
 // Define a service using a base URL and expected endpoints
 export const UserAuthApi = createApi({

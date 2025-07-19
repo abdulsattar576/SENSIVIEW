@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     height: verticalScale(70),
     borderTopWidth: 0,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#F3F0FF', // Light purple background
     borderTopLeftRadius: moderateScale(20),
     borderTopRightRadius: moderateScale(20),
     shadowColor: '#6C63FF',
@@ -80,22 +80,24 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(12),
     fontWeight: '500',
     marginBottom: verticalScale(5),
+    color: '#6C63FF', // Purple label color
   },
   iconContainer: {
     width: moderateScale(40),
     height: moderateScale(40),
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#E5E1FF', // Subtle purple for inactive icon
+    borderRadius: moderateScale(20),
   },
   activeIconContainer: {
     width: moderateScale(40),
     height: moderateScale(40),
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(108, 99, 255, 0.1)',
+    backgroundColor: 'rgba(108, 99, 255, 0.15)', // More visible purple for active icon
     borderRadius: moderateScale(20),
   },
-  
 });
 
 export default TabNavigator;

@@ -15,8 +15,8 @@ export const AuthContext = createContext();
 const Stack = createNativeStackNavigator();
 
 const AppContent = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
  
   const handleLogout = async () => {
